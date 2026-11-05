@@ -36,7 +36,7 @@ spec:
       duration_min: 10
       status: not_started
     - id: module-02
-      title: "Synchronize Repositories"
+      title: "Synchronize Repositories (documentation)"
       duration_min: 10
       status: not_started
     - id: module-03
