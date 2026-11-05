@@ -17,7 +17,7 @@ project:
   description: "Satellite Basics lab"
   # content_reviewer_email and infra_reviewer_email are assigned by the RHDP team — not set by the author
   jira_ticket: ""
-  workflow_id: ""
+  workflow_id: "f9c92b83-9fd0-4026-ac94-7f397eb8522f"
 
 spec:
   title: ""
