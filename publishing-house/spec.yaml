@@ -109,30 +109,30 @@ spec:
     vms_per_student:
       - role: satellite-server
         count: 1
-        cpu: null
-        ram_gb: null
-        disk_gb: null
+        cpu: 8
+        ram_gb: 32
+        disk_gb: 250
         os: "RHEL"
         hostname: "satellite.lab"
       - role: managed-host
         count: 1
-        cpu: null
-        ram_gb: null
-        disk_gb: null
+        cpu: 2
+        ram_gb: 4
+        disk_gb: 20
         os: "RHEL 10"
         hostname: "rhel1.lab"
       - role: managed-host
         count: 1
-        cpu: null
-        ram_gb: null
-        disk_gb: null
+        cpu: 2
+        ram_gb: 4
+        disk_gb: 20
         os: "RHEL 10"
         hostname: "rhel2.lab"
       - role: ai-host
         count: 1
-        cpu: null
-        ram_gb: null
-        disk_gb: null
+        cpu: 16
+        ram_gb: 64
+        disk_gb: 50
         os: "RHEL AI"
         hostname: "rhel-ai.lab"
 
@@ -144,7 +144,7 @@ spec:
     ai_justification: ""               # required if ai_model_tier = frontier or ai_requirement = gpu
     non_ga_products:
       - "Red Hat Lightspeed Vulnerability (tech preview)"
-    non_ga_access_plan: ""             # how access is provided for non-GA products
+    non_ga_access_plan: "local/on-premises"  # how access is provided for non-GA products
     external_services:
       - "security.access.redhat.com"
     gpu_nodes: 0                       # number of GPU nodes (0 = none)

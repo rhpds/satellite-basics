@@ -88,16 +88,18 @@ Pre-provisioned by setup automation:
 
 ## Infrastructure Requirements
 
-- **Cloud provider:** TBD — confirmed in infrastructure phase
-- **Cluster type:** TBD — confirmed in infrastructure phase
-- **OCP version:** TBD — confirmed in infrastructure phase
-- **Topology:** TBD — confirmed in infrastructure phase
-- **Sizing:** TBD — confirmed in infrastructure phase
-- **Automation approach:** TBD — confirmed in infrastructure phase
-- **AI/MaaS:** TBD — confirmed in infrastructure phase
-- **External services:** TBD — confirmed in infrastructure phase
-- **AAP version:** TBD — confirmed in infrastructure phase
-- **Non-GA products:** TBD — confirmed in infrastructure phase
+- **Cloud provider:** CNV
+- **Platform:** RHEL VMs (per-student)
+- **Topology:** Per-student
+- **Sizing (per student):**
+  - 1 Satellite server (`satellite.lab`) — 8 vCPU, 32GB RAM, 250GB disk
+  - 2 RHEL 10 managed hosts (`rhel1.lab`, `rhel2.lab`) — 2 vCPU, 4GB RAM, 20GB disk each
+  - 1 AI host (`rhel-ai.lab`) — 16 vCPU, 64GB RAM, 50GB disk (CPU inference for minimax-m2)
+- **Automation approach:** Ansible
+- **AI/MaaS:** MaaS, open-source tier — minimax-m2 model served via Satellite MCP server on `rhel-ai.lab`
+- **External services:** `security.access.redhat.com` (CVE map download for Lightspeed Vulnerability module)
+- **AAP version:** N/A — Satellite uses its own bundled Ansible execution engine; no standalone AAP
+- **Non-GA products:** Red Hat Lightspeed Vulnerability (tech preview) — access provided via local/on-premises deployment
 
 ## Assessment Strategy (Optional)
 
