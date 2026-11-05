@@ -206,8 +206,27 @@ approval_checklist:
         overview: "Demonstrates Satellite's MCP server integration enabling natural language queries of Satellite inventory data, errata discovery, and triggering remote execution patching jobs via the opencode TUI using the minimax-m2 model."
       - title: "Conclusion"
         overview: "Wraps up the lab with links to additional resources including convert2rhel and RHEL System Roles documentation."
-    rcars_overlap_pct: null
-    rcars_top_matches: []
+    rcars_overlap_pct: 62
+    rcars_top_matches:
+      - title: "LB1305 - AI-Powered RHEL Management with MCP & Satellite"
+        ci_name: "summit-2026.lb1305-ai-powered-rhel-mgmt-cnv.prod"
+        url: "https://catalog.demo.redhat.com/catalog?item=summit-2026.lb1305-ai-powered-rhel-mgmt-cnv.prod"
+        relevance_score: 62
+        why_it_fits: "Covers AI-driven inventory and management using MCP servers for Satellite, Lightspeed, and RHEL — natural language CVE and patching workflows."
+        workloads:
+          - role: "agnosticv_userdata_import"
+            collection: "agnosticd.cloud_vm_workloads"
+          - role: "asset_injector"
+            collection: "rhpds.manage_host"
+          - role: "break_httpd"
+            collection: "rhpds.rhel_management"
+      - title: "Red Hat Satellite Compliance"
+        ci_name: "zt-rhelbu.zt-satellite-compliance.prod"
+        url: "https://catalog.demo.redhat.com/catalog?item=zt-rhelbu.zt-satellite-compliance.prod"
+        relevance_score: 57
+        why_it_fits: "Builds a content view, creates an activation key and host group, and registers hosts — the same foundational steps as this lab."
+        workloads: []
+    catalog_gap: "Only beginner-level end-to-end Satellite 6.19 basics lab in the catalog. The AI integration via MCP (Module 13) overlaps with LB1305 but arrives after learners have completed the full workflow manually — a meaningfully different pedagogical path that neither existing lab provides."
     rejections: []
 
   infra:
