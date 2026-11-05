@@ -140,7 +140,7 @@ spec:
     aap_version: ""                    # required if AAP in products
     ai_requirement: "maas"             # maas | gpu | none
     ai_model_tier: "open-source"       # open-source | frontier (if ai_requirement = maas or gpu)
-    ai_model_name: "minimax-m2"        # specific model e.g. granite-3.1-8b
+    ai_model_name: "gpt-oss-120b"       # specific model e.g. granite-3.1-8b
     ai_justification: ""               # required if ai_model_tier = frontier or ai_requirement = gpu
     non_ga_products:
       - "Red Hat Lightspeed Vulnerability (tech preview)"

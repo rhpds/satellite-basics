@@ -2,7 +2,7 @@
 
 ### Brief Overview
 
-This module demonstrates Red Hat Satellite's Model Context Protocol (MCP) server integration, which enables an AI assistant to query and act on Satellite data using natural language. Participants use the `opencode` TUI (or its web GUI equivalent) on `rhel-ai.lab` — which runs the minimax-m2 LLM — to issue natural language prompts that query the Satellite inventory, discover hosts with pending errata, and trigger remote execution patching jobs. This module requires no prior AI experience; it shows how existing Satellite capabilities are exposed through an AI interface.
+This module demonstrates Red Hat Satellite's Model Context Protocol (MCP) server integration, which enables an AI assistant to query and act on Satellite data using natural language. Participants use the `opencode` TUI (or its web GUI equivalent) on `rhel-ai.lab` — which runs the gpt-oss-120b LLM — to issue natural language prompts that query the Satellite inventory, discover hosts with pending errata, and trigger remote execution patching jobs. This module requires no prior AI experience; it shows how existing Satellite capabilities are exposed through an AI interface.
 
 ### Audience and Time
 
@@ -30,7 +30,7 @@ This module demonstrates Red Hat Satellite's Model Context Protocol (MCP) server
 
 **Introduction**
 
-1. Review the concept: the Satellite MCP server exposes Satellite API capabilities as MCP tools that any MCP-compatible AI client can call. The `opencode` TUI on `rhel-ai.lab` is configured with the minimax-m2 model and the Satellite MCP server endpoint.
+1. Review the concept: the Satellite MCP server exposes Satellite API capabilities as MCP tools that any MCP-compatible AI client can call. The `opencode` TUI on `rhel-ai.lab` is configured with the gpt-oss-120b model and the Satellite MCP server endpoint.
 
 **Launch opencode**
 
@@ -39,7 +39,7 @@ This module demonstrates Red Hat Satellite's Model Context Protocol (MCP) server
    ```bash
    opencode
    ```
-4. Confirm that opencode starts and shows the minimax-m2 model is active.
+4. Confirm that opencode starts and shows the gpt-oss-120b model is active.
 5. Verify the Satellite MCP server is connected — look for a "satellite" tool listed in the available tools panel (or run `/tools` in the opencode TUI).
 
 **Query Inventory**
@@ -67,12 +67,12 @@ This module demonstrates Red Hat Satellite's Model Context Protocol (MCP) server
 ### Key Takeaways
 
 - The Satellite MCP server translates Satellite API operations into MCP tools that AI clients can call, enabling natural language control of Satellite without custom scripting.
-- The minimax-m2 model (open-source, running locally on `rhel-ai.lab`) handles language understanding; it does not send any Satellite data to an external service.
+- The gpt-oss-120b model (open-source, running locally on `rhel-ai.lab`) handles language understanding; it does not send any Satellite data to an external service.
 - AI-driven operations still run through Satellite's existing RBAC and job execution infrastructure — the AI is an interface layer, not a bypass.
 
 ### Infrastructure Notes
 
-- `rhel-ai.lab` must have opencode installed, the minimax-m2 model pre-loaded, and the Satellite MCP server endpoint configured — this is handled by the lab setup automation.
+- `rhel-ai.lab` must have opencode installed, the gpt-oss-120b model pre-loaded, and the Satellite MCP server endpoint configured — this is handled by the lab setup automation.
 - The Satellite MCP server must be enabled in Satellite settings and configured with appropriate API credentials for the opencode client to authenticate.
-- This module uses the minimax-m2 open-source LLM, which requires the `rhel-ai.lab` VM to have sufficient RAM to load the model (sizing TBD in infrastructure phase).
-- No GPU is required — minimax-m2 runs in CPU inference mode in this lab (MaaS pattern).
+- This module uses the gpt-oss-120b open-source LLM, which requires the `rhel-ai.lab` VM to have sufficient RAM to load the model (sizing TBD in infrastructure phase).
+- No GPU is required — gpt-oss-120b is served via LiteMaaS (MaaS pattern).

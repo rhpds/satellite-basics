@@ -24,7 +24,7 @@ This module orients the learner to the lab environment before any configuration 
 
 ### Detailed Steps
 
-1. Review the lab topology diagram: `satellite.lab` (Satellite 6.19 server), `rhel1.lab` and `rhel2.lab` (RHEL 10 managed hosts), `rhel-ai.lab` (AI host running opencode + minimax-m2).
+1. Review the lab topology diagram: `satellite.lab` (Satellite 6.19 server), `rhel1.lab` and `rhel2.lab` (RHEL 10 managed hosts), `rhel-ai.lab` (AI host running opencode + gpt-oss-120b).
 2. Note that Satellite is pre-installed and the RHEL 10 repositories are already synchronized — no initial setup is required.
 3. Open a browser tab and navigate to the Satellite Web UI URL provided in the lab environment (typically `https://satellite.lab`).
 4. Enter the admin username and password from the lab credentials panel.

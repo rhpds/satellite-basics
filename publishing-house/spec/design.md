@@ -96,7 +96,7 @@ Pre-provisioned by setup automation:
   - 2 RHEL 10 managed hosts (`rhel1.lab`, `rhel2.lab`) — 2 vCPU, 4GB RAM, 20GB disk each
   - 1 AI host (`rhel-ai.lab`) — 16 vCPU, 64GB RAM, 50GB disk (CPU inference for minimax-m2)
 - **Automation approach:** Ansible
-- **AI/MaaS:** MaaS, open-source tier — minimax-m2 model served via Satellite MCP server on `rhel-ai.lab`
+- **AI/MaaS:** MaaS, open-source tier — gpt-oss-120b model served via Satellite MCP server on `rhel-ai.lab`
 - **External services:** `security.access.redhat.com` (CVE map download for Lightspeed Vulnerability module)
 - **AAP version:** N/A — Satellite uses its own bundled Ansible execution engine; no standalone AAP
 - **Non-GA products:** Red Hat Lightspeed Vulnerability (tech preview) — access provided via local/on-premises deployment
