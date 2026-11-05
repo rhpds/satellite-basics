@@ -1,0 +1,18 @@
+---
+# By default egress traffic is not allowed, define below the ports allowed.
+egress:
+  - ports:
+      - protocol: TCP
+        port: 443
+  - to:
+      - podSelector:
+          matchLabels:
+            kubevirt.io: virt-launcher
+ingress:
+  - ports:
+      - protocol: TCP
+        port: 9999
+  - from:
+      - podSelector:
+          matchLabels:
+            kubevirt.io: virt-launcher
